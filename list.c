@@ -159,7 +159,7 @@ void * popCurrent(List * list) {
     
     Node * current_node = createNode(data);
     current_node = list->current;
-    Node * current_data = list->data;
+    Node * current_data = list->current->data;
 
     Node * izq = current_node->prev;
     Node * der = current_node->next;

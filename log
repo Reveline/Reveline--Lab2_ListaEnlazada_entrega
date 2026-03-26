@@ -322,3 +322,14 @@ list.c:162:31: error: ‘List’ {aka ‘struct List’} has no member named ‘
   162 |     Node * current_data = list->data;
       |                               ^~
 76a0fcb
+Thu Mar 26 08:52:12 PM UTC 2026: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:160:38: error: ‘data’ undeclared (first use in this function)
+  160 |     Node * current_node = createNode(data);
+      |                                      ^~~~
+list.c:160:38: note: each undeclared identifier is reported only once for each function it appears in
+c2b0af6
