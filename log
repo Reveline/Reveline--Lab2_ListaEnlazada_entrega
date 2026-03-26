@@ -265,3 +265,16 @@ Thu Mar 26 08:00:22 PM UTC 2026:
  tests:  10|2
 total_score: 40/60
 73943d4
+Thu Mar 26 08:13:00 PM UTC 2026: 
+ list.c | 9 +++++++++
+ 1 file changed, 9 insertions(+)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:114:39: error: expected ‘;’ before ‘new_node’
+  114 |         new_node->prev = list->current
+      |                                       ^
+      |                                       ;
+  115 |         new_node->next = list->current->next
+      |         ~~~~~~~~                       
+805c64e
