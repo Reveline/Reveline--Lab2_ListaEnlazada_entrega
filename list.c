@@ -89,8 +89,9 @@ void pushFront(List * list, void * data) {
     if (list->head != NULL){
         list->head->prev = new_node;
         list->head = new_node;
-    } else {
+    } else { //Se inserta el primer elemnto de la lista en caso de esta vacia
         list->head = new_node;
+        list->tail = new_node;
     }
     
 }
