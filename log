@@ -141,3 +141,18 @@ Thu Mar 26 05:09:55 PM UTC 2026:
  tests:  1|5
 total_score: 10/60
 211e31b
+Thu Mar 26 05:12:49 PM UTC 2026: 
+ list.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘firstList’:
+list.c:48:21: error: ‘head’ undeclared (first use in this function)
+   48 |     list->current = head;
+      |                     ^~~~
+list.c:48:21: note: each undeclared identifier is reported only once for each function it appears in
+list.c:50:1: error: control reaches end of non-void function [-Werror=return-type]
+   50 | }
+      | ^
+cc1: all warnings being treated as errors
+1692053
