@@ -52,7 +52,14 @@ void * firstList(List * list) {
 }
 
 void * nextList(List * list) {
-    return NULL;
+    // Verificar si los punteros son validos
+    if ((list->head == NULL) || (list->current == NULL)) return NULL;
+    //Verificar si existe next
+    if ((list->current->next == NULL)) return NULL;
+
+    list->current = list->current->next;
+    
+    return list->current->data;
 }
 
 // 3. Programe las funciones void * lastList(List * list) y void * prevList(List * list).
