@@ -110,12 +110,32 @@ void pushCurrent(List * list, void * data) {
     Node * new_node = createNode(data);
     // Verificar si existe current
     if (list->current != NULL){
-        //Se conecta el nodo con el current y el elemente siguiente a este
-        new_node->prev = list->current;
-        new_node->next = list->current->next;
-        new_node->next->prev = new_node;
-        new_node->prev->next = new_node;
-    }
+        //Verificar que exista nodo luego de current
+        if (list->current->next != NULL){
+            //Se conecta el nodo con el current y el elemente siguiente a este
+            new_node->prev = list->current;
+            new_node->next = list->current->next;
+            new_node->next->prev = new_node;
+            new_node->prev->next = new_node;
+        } else {
+            list->tail = new_node;
+        }
+        
+    } else { // EN CASO DE NO EXISTIR CURRENT
+        // Verificar que exista head
+        if (list->head != NULL){
+            list->current = list->head;
+
+            //Se conecta el nodo con el current y el elemente siguiente a este
+            new_node->prev = list->current;
+            new_node->next = list->current->next;
+            new_node->next->prev = new_node;
+            new_node->prev->next = new_node;
+        } else {
+            list->head = new_node
+            list->current = list->head;
+        }
+    } //FIN ELSE list->current != NULL
 }
 
 void * popFront(List * list) {

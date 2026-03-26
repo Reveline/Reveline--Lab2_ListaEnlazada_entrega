@@ -283,3 +283,16 @@ Thu Mar 26 08:13:10 PM UTC 2026:
  1 file changed, 2 insertions(+), 2 deletions(-)
  tests:  0|0
 c619878
+Thu Mar 26 08:21:04 PM UTC 2026: 
+ list.c | 20 ++++++++++++++++++++
+ 1 file changed, 20 insertions(+)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:135:34: error: expected ‘;’ before ‘list’
+  135 |             list->head = new_node
+      |                                  ^
+      |                                  ;
+  136 |             list->current = list->head;
+      |             ~~~~                  
+0949344
