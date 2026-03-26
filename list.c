@@ -134,6 +134,7 @@ void pushCurrent(List * list, void * data) {
             new_node->next->prev = new_node;
             new_node->prev->next = new_node;
         } else {
+            // Se asigna el puntero head al nuevo nodo
             list->head = new_node;
             list->current = list->head;
         }
@@ -154,7 +155,34 @@ void * popBack(List * list) {
 // Nota: El current debe quedar apuntando al nodo siguiente del eliminado.
 
 void * popCurrent(List * list) {
-    return NULL;
+    if (list->current == NULL) return NULL;
+    
+    Node * current_node = createNode(data);
+    current_node = list->current;
+    Node * current_data = list->data;
+
+    Node * izq = current_node->prev;
+    Node * der = current_node->next;
+
+    // no hay elemento a la izquiera -> current es el head
+    if (izq == NULL){
+        list->head = der;
+    } else {
+        izq->next = der;
+    } // FIN izq == NULL
+
+    // no hay elemento a la derecha -> current es el tail
+    // ¡Recuerda que el next del current sera el nuevo current!
+    if (der == NULL){
+        list->tail = izq;
+        list->current = current_node->next;
+    } else {
+        der->prev = izq;
+        list->current = current_node->next;
+    } // FIN izq == NULL
+
+    free(current_node);
+    return current_data;
 }
 
 void cleanList(List * list) {
