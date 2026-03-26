@@ -69,6 +69,7 @@ void * nextList(List * list) {
 void * lastList(List * list) {
     if (list->tail == NULL) return NULL;
     list->current = list->tail;
+    
     return list->current->data;
 }
 
@@ -81,7 +82,6 @@ void * prevList(List * list) {
 
 void pushFront(List * list, void * data) {
     if (list->head == NULL) return NULL;
-    list
 }
 
 void pushBack(List * list, void * data) {

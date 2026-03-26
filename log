@@ -207,3 +207,16 @@ list.c:84:9: error: expected ‘;’ before ‘}’ token
       | ~        
 cc1: all warnings being treated as errors
 20ad762
+Thu Mar 26 07:40:02 PM UTC 2026: 
+ list.c | 1 -
+ 1 file changed, 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘pushFront’:
+list.c:84:36: error: ‘return’ with a value, in function returning void [-Wreturn-mismatch]
+   84 |     if (list->head == NULL) return NULL;
+      |                                    ^~~~
+list.c:83:6: note: declared here
+   83 | void pushFront(List * list, void * data) {
+      |      ^~~~~~~~~
+fa15d54
