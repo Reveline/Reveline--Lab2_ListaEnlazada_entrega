@@ -4,3 +4,99 @@ Thu Mar 26 04:52:23 PM UTC 2026:
  tests:  0|6
 total_score: 0/60
 e065d22
+Thu Mar 26 05:04:11 PM UTC 2026: 
+ list.c | 9 +++++++--
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘createList’:
+list.c:36:9: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+   36 |     if (New_list = NULL) return NULL;
+      |         ^~~~~~~~
+list.c: In function ‘pushBack’:
+list.c:74:25: error: ‘List’ {aka ‘struct List’} has no member named ‘tail’
+   74 |     list->current = list->tail;
+      |                         ^~
+list.c: In function ‘popBack’:
+list.c:89:25: error: ‘List’ {aka ‘struct List’} has no member named ‘tail’
+   89 |     list->current = list->tail;
+      |                         ^~
+test.c: In function ‘initialize_exList’:
+test.c:56:15: error: ‘List’ {aka ‘struct List’} has no member named ‘tail’
+   56 |      L->head=L->tail=createNode(j);
+      |               ^~
+test.c:65:11: error: ‘List’ {aka ‘struct List’} has no member named ‘tail’
+   65 |          L->tail->next=n;
+      |           ^~
+test.c:66:19: error: ‘List’ {aka ‘struct List’} has no member named ‘tail’
+   66 |          n->prev=L->tail;
+      |                   ^~
+test.c:67:11: error: ‘List’ {aka ‘struct List’} has no member named ‘tail’
+   67 |          L->tail=n;
+      |           ^~
+test.c: In function ‘initialize_emptyList’:
+test.c:78:15: error: ‘List’ {aka ‘struct List’} has no member named ‘tail’
+   78 |      L->head=L->tail=NULL;
+      |               ^~
+test.c: In function ‘test_create’:
+test.c:89:28: error: ‘List’ {aka ‘struct List’} has no member named ‘tail’
+   89 |     if(L->head != NULL || L->tail !=NULL || L->current!=NULL){
+      |                            ^~
+test.c: In function ‘test_first_next’:
+test.c:149:19: error: ‘List’ {aka ‘struct List’} has no member named ‘tail’
+  149 |     L->current = L->tail;
+      |                   ^~
+test.c: In function ‘test_last_prev’:
+test.c:188:23: error: ‘List’ {aka ‘struct List’} has no member named ‘tail’
+  188 |     if(L->current != L->tail){
+      |                       ^~
+test.c:205:23: error: ‘List’ {aka ‘struct List’} has no member named ‘tail’
+  205 |     if(L->current != L->tail->prev){
+      |                       ^~
+test.c: In function ‘test_pushfront’:
+test.c:249:9: error: ‘List’ {aka ‘struct List’} has no member named ‘tail’
+  249 |     if(L->tail==NULL) {
+      |         ^~
+test.c:254:20: error: ‘List’ {aka ‘struct List’} has no member named ‘tail’
+  254 |     if(L->head != L->tail){
+      |                    ^~
+test.c: In function ‘test_pushcurrent’:
+test.c:327:17: error: ‘List’ {aka ‘struct List’} has no member named ‘tail’
+  327 |     L->current=L->tail;
+      |                 ^~
+test.c:328:16: error: ‘List’ {aka ‘struct List’} has no member named ‘tail’
+  328 |     Node* aux=L->tail;
+      |                ^~
+test.c:335:9: error: ‘List’ {aka ‘struct List’} has no member named ‘tail’
+  335 |     if(L->tail == NULL || L->tail->data != j){
+      |         ^~
+test.c:335:28: error: ‘List’ {aka ‘struct List’} has no member named ‘tail’
+  335 |     if(L->tail == NULL || L->tail->data != j){
+      |                            ^~
+test.c:340:41: error: ‘List’ {aka ‘struct List’} has no member named ‘tail’
+  340 |     if(aux->next == NULL || aux->next!=L->tail){
+      |                                         ^~
+test.c:345:9: error: ‘List’ {aka ‘struct List’} has no member named ‘tail’
+  345 |     if(L->tail->prev == NULL || L->tail->prev!=aux){
+      |         ^~
+test.c:345:34: error: ‘List’ {aka ‘struct List’} has no member named ‘tail’
+  345 |     if(L->tail->prev == NULL || L->tail->prev!=aux){
+      |                                  ^~
+test.c: In function ‘test_popcurrent’:
+test.c:410:17: error: ‘List’ {aka ‘struct List’} has no member named ‘tail’
+  410 |     L->current=L->tail;
+      |                 ^~
+test.c:411:10: error: ‘List’ {aka ‘struct List’} has no member named ‘tail’
+  411 |     aux=L->tail->prev;
+      |          ^~
+test.c:415:10: error: ‘List’ {aka ‘struct List’} has no member named ‘tail’
+  415 |     aux=L->tail->prev;
+      |          ^~
+test.c:421:9: error: ‘List’ {aka ‘struct List’} has no member named ‘tail’
+  421 |     if(L->tail != aux){
+      |         ^~
+test.c:426:9: error: ‘List’ {aka ‘struct List’} has no member named ‘tail’
+  426 |     if(L->tail->next != NULL){
+      |         ^~
+cc1: all warnings being treated as errors
+899fc57

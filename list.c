@@ -13,7 +13,7 @@ struct Node {
 
 struct List {
     Node * head;
-    Node * tail;
+    int size;
     Node * current;
 };
 
@@ -32,7 +32,12 @@ Node * createNode(void * data) {
 // Recuerda reservar memoria al puntero usando malloc o calloc.
 
 List * createList() {
-     return NULL;
+    List * New_list = malloc(sizeof(List));
+    if (New_list = NULL) return NULL;
+    New_list->head = NULL;
+    New_list-> size = 0;
+    New_list->head = NULL;
+    return New_list;
 }
 
 // 2. Programe las funciones void * firstList(List * list) y void * nextList(List * list).
