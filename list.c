@@ -13,7 +13,7 @@ struct Node {
 
 struct List {
     Node * head;
-    int size;
+    Node * tail;
     Node * current;
 };
 
@@ -35,7 +35,6 @@ List * createList() {
     List * New_list = malloc(sizeof(List));
     if (New_list = NULL) return NULL;
     New_list->head = NULL;
-    New_list-> size = 0;
     New_list->head = NULL;
     return New_list;
 }

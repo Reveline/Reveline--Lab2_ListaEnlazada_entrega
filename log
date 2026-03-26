@@ -100,3 +100,14 @@ test.c:426:9: error: ‘List’ {aka ‘struct List’} has no member named ‘t
       |         ^~
 cc1: all warnings being treated as errors
 899fc57
+Thu Mar 26 05:04:39 PM UTC 2026: 
+ list.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘createList’:
+list.c:36:9: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+   36 |     if (New_list = NULL) return NULL;
+      |         ^~~~~~~~
+cc1: all warnings being treated as errors
+cf9b36a
