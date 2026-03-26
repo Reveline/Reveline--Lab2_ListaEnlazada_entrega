@@ -33,7 +33,7 @@ Node * createNode(void * data) {
 
 List * createList() {
     List * New_list = malloc(sizeof(List));
-    assert(new != NULL);
+    assert(New_list != NULL);
     New_list->head = NULL;
     New_list->tail = NULL;
     New_list->current = NULL;
