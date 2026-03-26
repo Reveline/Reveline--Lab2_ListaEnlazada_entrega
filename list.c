@@ -111,8 +111,8 @@ void pushCurrent(List * list, void * data) {
     // Verificar si existe current
     if (list->current != NULL){
         //Se conecta el nodo con el current y el elemente siguiente a este
-        new_node->prev = list->current
-        new_node->next = list->current->next
+        new_node->prev = list->current;
+        new_node->next = list->current->next;
         new_node->next->prev = new_node;
         new_node->prev->next = new_node;
     }
