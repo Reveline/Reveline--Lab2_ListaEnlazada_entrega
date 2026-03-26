@@ -123,3 +123,15 @@ Thu Mar 26 05:06:05 PM UTC 2026:
  tests:  1|5
 total_score: 10/60
 6969ae1
+Thu Mar 26 05:09:47 PM UTC 2026: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from list.c:3,
+                 from test.c:5:
+list.c: In function ‘createList’:
+list.c:36:12: error: ‘new’ undeclared (first use in this function)
+   36 |     assert(new != NULL);
+      |            ^~~
+list.c:36:12: note: each undeclared identifier is reported only once for each function it appears in
+65bef84
