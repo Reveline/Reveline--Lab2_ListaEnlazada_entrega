@@ -157,8 +157,8 @@ void * popBack(List * list) {
 void * popCurrent(List * list) {
     if (list->current == NULL) return NULL;
     
-    Node * current_node = createNode(data);
-    current_node = list->current;
+    Node * current_node = list->current;
+    
     Node * current_data = list->current->data;
 
     Node * izq = current_node->prev;
