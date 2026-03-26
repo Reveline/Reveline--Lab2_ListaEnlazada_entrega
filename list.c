@@ -87,6 +87,8 @@ void pushFront(List * list, void * data) {
     Node * new_node = createNode(data);
     // Verificar la existencia de un head
     if (list->head != NULL){
+        //El nuevo nodo y el head se concetan mutuamente
+        new_node->next = list->head;
         list->head->prev = new_node;
         list->head = new_node;
     } else { //Se inserta el primer elemnto de la lista en caso de esta vacia
