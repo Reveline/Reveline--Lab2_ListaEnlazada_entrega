@@ -123,22 +123,7 @@ void pushCurrent(List * list, void * data) {
             list->tail->prev = list->current;
         }
         
-    } else { // EN CASO DE NO EXISTIR CURRENT
-        // Verificar que exista head
-        if (list->head != NULL){
-            list->current = list->head;
-
-            //Se conecta el nodo con el current y el elemente siguiente a este
-            new_node->prev = list->current;
-            new_node->next = list->current->next;
-            new_node->next->prev = new_node;
-            new_node->prev->next = new_node;
-        } else {
-            // Se asigna el puntero head al nuevo nodo
-            list->head = new_node;
-            list->current = list->head;
-        }
-    } //FIN ELSE list->current != NULL
+    } 
 }
 
 void * popFront(List * list) {
